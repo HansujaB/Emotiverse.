@@ -117,12 +117,12 @@
 
       // Position the note at the given x and y coordinates if provided
       if (x !== undefined && y !== undefined) {
-        note.style.left = ${x - 75}px;
-        note.style.top = ${y - 75}px;
+        note.style.left = `${x - 75}px`;
+        note.style.top = `${y - 75}px`;
       } else {
         // Position the note at the next available spot
-        note.style.left = ${noteX}px;
-        note.style.top = ${noteY}px;
+        note.style.left = `${noteX}px`;
+        note.style.top = `${noteY}px`;
 
         // Move the X position for the next note
         noteX += noteSpacing;
@@ -157,8 +157,8 @@
 
       document.addEventListener('mousemove', (e) => {
         if (isDragging && currentNote) {
-          currentNote.style.left = ${e.clientX - offsetX}px;
-          currentNote.style.top = ${e.clientY - offsetY}px;
+          currentNote.style.left = `${e.clientX - offsetX}px`;
+          currentNote.style.top = `${e.clientY - offsetY}px`;
         }
       });
 
@@ -183,3 +183,4 @@
   </script>
 </body>
 </html>
+
