@@ -1,0 +1,55 @@
+body {
+    font-family: "Todd Williams";
+    background-color: #d9c5e7;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+   
+}
+
+
+.chat-container {
+    width: 400px;
+    text-align: center;
+}
+
+
+.chat-box {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #C8A1E0;
+    color: white;
+    cursor: pointer;
+}
+
+
+h1{
+    color: #faf4fd;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: 40px;
+    text-shadow: 2px 2px 15px rgb(243, 190, 227);
+}
