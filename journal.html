@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal Sticky Notes</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Times New Roman'; /* Default font */
+    }
+
+    /* Updated background with new color palette */
+    #metaverse-background {
+      background-color: #F7EFE5; /* Light beige */
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center align the heading */
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Todd Williams'; /* Modern and bold heading */
+      color: #674188; /* Dark purple */
+      margin-top: 20px;
+      font-size: 60px;
+      font-weight: 600;
+      text-align: center; /* Center the heading text */
+    }
+
+    button#add-note-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif; /* Clean font for the button */
+      background-color: #C8A1E0; /* Lavender */
+      border: none;
+      cursor: pointer;
+      color: white;
+      border-radius: 5px;
+      margin-top: 10px; /* Space between heading and button */
+      position: absolute;
+      top: 80px; /* Place the button under the heading */
+      left: 20px; /* Align to the left */
+      transition: background-color 0.3s ease;
+    }
+
+    button#add-note-btn:hover {
+      background-color: #674188; /* Dark purple on hover */
+    }
+
+    #notes-container {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px; /* Space between notes */
+      width: 100%; /* Allow notes to be placed across the full width */
+      height: calc(100% - 150px); /* Adjusted height */
+      position: relative; /* Allow absolute positioning of notes */
+      padding: 0; /* Removed padding */
+      overflow: hidden; /* Hide overflow */
+    }
+
+    .note {
+      width: 150px;
+      height: 150px;
+      background-color: #E2BFD9; /* Light pink for sticky notes */
+      padding: 10px;
+      position: absolute; /* Make notes position absolute for free placement */
+      border: 1px solid #674188; /* Dark purple border */
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      cursor: move;
+      color: #000;
+      font-size: 16px;
+      font-family: 'Safaniah'; /* Readable font for the sticky notes */
+      overflow-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+  <div id="metaverse-background">
+    <!-- Center-aligned heading -->
+    <h1>Journal</h1>
+
+    <!-- Button in top left corner, below the heading -->
+    <button id="add-note-btn">Add Note</button>
+
+    <!-- Notes container -->
+    <div id="notes-container"></div>
+  </div>
+
+  <script>
+    const notesContainer = document.getElementById('notes-container');
+    const addNoteBtn = document.getElementById('add-note-btn');
+
+    let noteX = 100; // Starting X position for new notes
+    let noteY = 50;  // Starting Y position for new notes (moved upward)
+    const noteSpacing = 200; // Increased spacing between notes horizontally and vertically
+    const containerWidth = window.innerWidth - 220; // Adjusted width considering note and spacing
+
+    let isDragging = false; // To track dragging state
+    let currentNote = null; // To hold the currently dragged note
+
+    // Function to create a new sticky note
+    function createNote(x, y) {
+      const note = document.createElement('div');
+      note.classList.add('note');
+      note.contentEditable = true;
+      note.innerText = 'New Note';
+
+      // Position the note at the given x and y coordinates if provided
+      if (x !== undefined && y !== undefined) {
+        note.style.left = `${x - 75}px`;
+        note.style.top = `${y - 75}px`;
+      } else {
+        // Position the note at the next available spot
+        note.style.left = `${noteX}px`;
+        note.style.top = `${noteY}px`;
+
+        // Move the X position for the next note
+        noteX += noteSpacing;
+
+        // If the note exceeds the container width, wrap to the next row
+        if (noteX > containerWidth) {
+          noteX = 100; // Reset X to the start
+          noteY += noteSpacing; // Move down to the next row
+        }
+      }
+
+      notesContainer.appendChild(note);
+
+      // Make the note draggable
+      makeNoteDraggable(note);
+    }
+
+    // Function to allow dragging of sticky notes
+    function makeNoteDraggable(note) {
+      let offsetX = 0;
+      let offsetY = 0;
+
+      note.addEventListener('mousedown', (e) => {
+        isDragging = true; // Start dragging
+        currentNote = note; // Set the currently dragged note
+        offsetX = e.clientX - note.offsetLeft;
+        offsetY = e.clientY - note.offsetTop;
+
+        // Prevent click event from propagating to the background
+        e.stopPropagation();
+      });
+
+      document.addEventListener('mousemove', (e) => {
+        if (isDragging && currentNote) {
+          currentNote.style.left = `${e.clientX - offsetX}px`;
+          currentNote.style.top = `${e.clientY - offsetY}px`;
+        }
+      });
+
+      document.addEventListener('mouseup', () => {
+        isDragging = false; // Stop dragging
+        currentNote = null; // Reset the current note
+      });
+    }
+
+    // Create a note on button click
+    addNoteBtn.addEventListener('click', () => {
+      createNote(); // Add a note at the next available position
+    });
+
+    // Create a note on double click anywhere on the background
+    document.getElementById('metaverse-background').addEventListener('dblclick', (e) => {
+      if (e.target !== addNoteBtn && !e.target.classList.contains('note')) {
+        createNote(e.clientX, e.clientY); // Add a new note at the double-click position
+      }
+    });
+
+  </script>
+</body>
+</html>
