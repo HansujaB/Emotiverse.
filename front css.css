@@ -1,0 +1,110 @@
+header{
+    text-align: center;
+    padding: 15px;
+    background-image:url('https://t3.ftcdn.net/jpg/03/60/45/20/360_F_360452056_F7GUAV8DQ9qQRzvCyBpTjIEz5Q8oMwuR.jpg');
+    color: white;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .titles {
+  position: absolute;
+  top: 25%; 
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #FFFFFF;
+  text-align: center;
+  width: 100%;
+  font-size: 100px;
+  font-family:"candara";
+  }
+  
+  .tagline {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #FFFFFF;
+  font-size: 40px;
+  text-align: center;
+  width: 100%;
+  font-family:"segoe";
+  }
+  
+  .explore{
+    position: absolute;
+    top: 65%;
+    left: 45%;
+    text-align: center;
+    transform: translate(-50%,0);
+    background-color: rgb(114, 92, 237);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px,20px;
+    width: 150px; 
+    height: 59px;
+    font-size: 24px;
+    color: black;
+    font-family: "segoe";
+  }
+  
+  .login{
+    position: absolute;
+    left: 90%;
+    top: 5%;
+    background-color: rgb(179, 87, 188);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 100px;
+    height: 59px;
+    font-size: 20px;
+    color: white;
+    font-family: "segoe";
+  
+  }
+  
+  a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .journal{
+    position: absolute;
+    top: 65%;
+    left: 60%;
+    text-align: center;
+    transform: translate(-50%,0);
+    background-color: rgb(114, 92, 237);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px,20px;
+    width: 150px; 
+    height: 59px;
+    font-size: 24px;
+    color: black;
+    font-family: "segoe";
+  }
+  
+  .feeling{
+    position: absolute;
+    top: 75%;
+    left: 52%;
+    text-align: center;
+    transform: translate(-50%,0);
+    background-color: rgb(114, 92, 237);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px,20px;
+    width: 350px; 
+    height: 59px;
+    font-size: 24px;
+    color: black;
+    font-family: "segoe";
+  }
