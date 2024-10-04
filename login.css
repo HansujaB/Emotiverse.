@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #8152aa;
+}
+
+.login-container {
+  width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color:#c8a1e0;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-form {
+  margin-top: 20px;
+}
+
+#login-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#login-form input[type="text"], #login-form input[type="password"] {
+  width: 95%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+}
+
+#login-form select {
+  width: 95%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+}
+
+#severity {
+  width: 80%;
+  height: 10px;
+  border-radius: 5px;
+  background: #ccc;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+#severity::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: rgb(6, 3, 6);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#severity-value {
+  position: relative;
+  top: -30px;
+  left: 10%;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#login-btn {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(188, 103, 117);
+  color: #FFFFFF;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
