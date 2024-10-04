@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Exam Hall</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Ambient Light -->
+      <a-light type="ambient" color="#555"></a-light>
+
+      <!-- Directional Light -->
+      <a-light type="directional" color="#F5F5F5" intensity="0.5" position="-1 2 4"></a-light>
+
+      <!-- Chessboard Pattern of Light Boxes -->
+      <a-box position="0 5 -10" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="2 5 -10" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="4 5 -10" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="6 5 -10" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="8 5 -10" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="10 5 -10" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+
+      <a-box position="0 5 -8" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="2 5 -8" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="4 5 -8" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="6 5 -8" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="8 5 -8" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="10 5 -8" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+
+      <a-box position="0 5 -6" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="2 5 -6" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="4 5 -6" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="6 5 -6" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="8 5 -6" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="10 5 -6" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+
+      <a-box position="0 5 -4" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="2 5 -4" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="4 5 -4" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="6 5 -4" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="8 5 -4" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="10 5 -4" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+
+      <a-box position="0 5 -2" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="2 5 -2" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="4 5 -2" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="6 5 -2" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="8 5 -2" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="10 5 -2" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+
+      <a-box position="0 5 -2" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="-2 5 -2" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="-4 5 -2" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="-6 5 -2" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="-8 5 -2" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="-10 5 -2" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      
+      <a-box position="0 5 -4" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="-2 5 -4" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="-4 5 -4" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="-6 5 -4" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="-8 5 -4" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="-10 5 -4" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+
+      <a-box position="0 5 -6" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="-2 5 -6" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="-4 5 -6" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="-6 5 -6" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="-8 5 -6" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="-10 5 -6" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      
+      <a-box position="0 5 -8" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="-2 5 -8" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="-4 5 -8" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="-6 5 -8" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="-8 5 -8" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="-10 5 -8" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+
+      <a-box position="0 5 -10" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="-2 5 -10" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="-4 5 -10" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="-6 5 -10" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+      <a-box position="-8 5 -10" width="2" height="0.1" depth="2" color="#F5F5F5" emissive="#F5F5F5" emissive-intensity="0.5"></a-box>
+      <a-box position="-10 5 -10" width="2" height="0.1" depth="2" color="#00072d" emissive="#00072d" emissive-intensity="0.5"></a-box>
+
+      <!-- Floor (Exam Hall) -->
+      <a-plane rotation="-90 0 0" width="50" height="50" color="#808080"></a-plane>
+
+      <!-- Walls of the hall -->
+      <a-box position="0 5 -25" width="50" height="10" depth="1" color="#D3D3D3"></a-box>
+      <a-box position="25 5 0" width="1" height="10" depth="50" color="#D3D3D3"></a-box>
+      <a-box position="-25 5 0" width="1" height="10" depth="50" color="#D3D3D3"></a-box>
+      <a-box position="0 5 25" width="50" height="10" depth="1" color="#D3D3D3"></a-box>
+
+        <!-- Desks, Chairs, and Computers (8 Rows Per Column in 6 Columns) -->
+
+      <!-- Function to create multiple rows -->
+      <script>
+        function createRow(x, z, scene) {
+          // Desk
+          var desk = document.createElement('a-box');
+          desk.setAttribute('position', `${x} 0.75 ${z}`);
+          desk.setAttribute('width', '2');
+          desk.setAttribute('height', '0.1');
+          desk.setAttribute('depth', '1');
+          desk.setAttribute('color', '#964B00');  // Wooden desk surface
+          scene.appendChild(desk);
+
+          // Desk Drawer
+          var drawer = document.createElement('a-box');
+          drawer.setAttribute('position', `${x} 0.5 ${z + 0.3}`);
+          drawer.setAttribute('width', '0.5');
+          drawer.setAttribute('height', '0.2');
+          drawer.setAttribute('depth', '0.7');
+          drawer.setAttribute('color', '#964B00');  // Same wood color for drawer
+          scene.appendChild(drawer);
+
+          // Legs of the desk
+          var legColor = '#666';  // Dark metallic color
+          var leg1 = document.createElement('a-box');
+          leg1.setAttribute('position', `${x + 0.8} 0.4 ${z}`);
+          leg1.setAttribute('width', '0.1');
+          leg1.setAttribute('height', '0.75');
+          leg1.setAttribute('depth', '0.1');
+          leg1.setAttribute('color', legColor);
+          scene.appendChild(leg1);
+
+          var leg2 = document.createElement('a-box');
+          leg2.setAttribute('position', `${x - 0.8} 0.4 ${z}`);
+          leg2.setAttribute('width', '0.1');
+          leg2.setAttribute('height', '0.75');
+          leg2.setAttribute('depth', '0.1');
+          leg2.setAttribute('color', legColor);
+          scene.appendChild(leg2);
+
+          var leg3 = document.createElement('a-box');
+          leg3.setAttribute('position', `${x + 0.8} 0.4 ${z - 0.9}`);
+          leg3.setAttribute('width', '0.1');
+          leg3.setAttribute('height', '0.75');
+          leg3.setAttribute('depth', '0.1');
+          leg3.setAttribute('color', legColor);
+          scene.appendChild(leg3);
+
+          var leg4 = document.createElement('a-box');
+          leg4.setAttribute('position', `${x - 0.8} 0.4 ${z - 0.9}`);
+          leg4.setAttribute('width', '0.1');
+          leg4.setAttribute('height', '0.75');
+          leg4.setAttribute('depth', '0.1');
+          leg4.setAttribute('color', legColor);
+          scene.appendChild(leg4);
+
+          // Computer Screen (White with Black Outline)
+          var screenOutline = document.createElement('a-box');
+          screenOutline.setAttribute('position', `${x} 1.5 ${z}`);
+          screenOutline.setAttribute('depth', '0.05'); // Thin depth for outline
+          screenOutline.setAttribute('height', '1.05'); // Slightly larger height for outline
+          screenOutline.setAttribute('width', '1.6'); // Slightly larger width for outline
+          screenOutline.setAttribute('color', '#000000'); // Black outline
+          scene.appendChild(screenOutline);
+
+          var screen = document.createElement('a-plane');
+          screen.setAttribute('position', `${x} 1.5 ${z - 0.01}`); // Slightly in front of the outline
+          screen.setAttribute('width', '1.4');
+          screen.setAttribute('height', '0.9');
+          screen.setAttribute('color', "#FFFFFF"); // White computer screen
+          screen.setAttribute('material', 'shader: flat');
+          scene.appendChild(screen);
+
+          // Office Chair
+          // Seat
+          var chairSeat = document.createElement('a-box');
+          chairSeat.setAttribute('position', `${x} 0.35 ${z + 1}`);
+          chairSeat.setAttribute('width', '0.8');
+          chairSeat.setAttribute('height', '0.05');
+          chairSeat.setAttribute('depth', '0.8');
+          chairSeat.setAttribute('color', '#333');  // Dark gray seat
+          scene.appendChild(chairSeat);
+
+          // Chair Backrest
+          var chairBackrest = document.createElement('a-box');
+          chairBackrest.setAttribute('position', `${x} 0.75 ${z + 1.3}`);
+          chairBackrest.setAttribute('width', '0.8');
+          chairBackrest.setAttribute('height', '0.5');
+          chairBackrest.setAttribute('depth', '0.05');
+          chairBackrest.setAttribute('color', '#333');  // Dark gray backrest
+          scene.appendChild(chairBackrest);
+
+          // Armrests
+          var armrestColor = '#444';  // Slightly lighter dark gray
+          var armrestLeft = document.createElement('a-box');
+          armrestLeft.setAttribute('position', `${x - 0.4} 0.45 ${z + 1}`);
+          armrestLeft.setAttribute('width', '0.05');
+          armrestLeft.setAttribute('height', '0.05');
+          armrestLeft.setAttribute('depth', '0.8');
+          armrestLeft.setAttribute('color', armrestColor);
+          scene.appendChild(armrestLeft);
+
+          var armrestRight = document.createElement('a-box');
+          armrestRight.setAttribute('position', `${x + 0.4} 0.45 ${z + 1}`);
+          armrestRight.setAttribute('width', '0.05');
+          armrestRight.setAttribute('height', '0.05');
+          armrestRight.setAttribute('depth', '0.8');
+          armrestRight.setAttribute('color', armrestColor);
+          scene.appendChild(armrestRight);
+
+          // Chair Legs (Centered)
+          var chairLeg1 = document.createElement('a-cylinder');
+          chairLeg1.setAttribute('position', `${x} 0.2 ${z + 1}`);
+          chairLeg1.setAttribute('radius', '0.1');
+          chairLeg1.setAttribute('height', '0.4');
+          chairLeg1.setAttribute('color', '#CCC');  // Silver metallic chair leg
+          scene.appendChild(chairLeg1);
+
+          // Chair Base (Star-shaped base with 5 legs)
+          for (let i = 0; i < 5; i++) {
+            let angle = (Math.PI * 2) / 5 * i;
+            let xOffset = Math.cos(angle) * 0.4;
+            let zOffset = Math.sin(angle) * 0.4;
+
+            var chairBaseLeg = document.createElement('a-box');
+            chairBaseLeg.setAttribute('position', `${x + xOffset} 0.1 ${z + 1 + zOffset}`);
+            chairBaseLeg.setAttribute('width', '0.05');
+            chairBaseLeg.setAttribute('height', '0.05');
+            chairBaseLeg.setAttribute('depth', '0.6');
+            chairBaseLeg.setAttribute('rotation', `0 ${i * 72} 0`);
+            chairBaseLeg.setAttribute('color', '#CCC');  // Silver metallic base legs
+            scene.appendChild(chairBaseLeg);
+          }
+        }
+
+        window.onload = function() {
+          var scene = document.querySelector('a-scene');
+
+          // Create 8 rows for each column
+          for (let row = 0; row < 8; row++) {
+            let zOffset = -3 - row * 2; // Adjust spacing between rows
+
+            // Create 6 columns of rows
+            createRow(-6, zOffset, scene);  // Left column
+            createRow(-3, zOffset, scene);  // Slight left column
+            createRow(0, zOffset, scene);   // Center column
+            createRow(3, zOffset, scene);   // Slight right column
+            createRow(6, zOffset, scene);   // Right column
+            createRow(9, zOffset, scene);   // Far right column
+          }
+        }
+        {
+                  // Chair Backrest
+                  var chairBackrest = document.createElement('a-box');
+          chairBackrest.setAttribute('position', `${x} 0.75 ${z + 1.3}`);
+          chairBackrest.setAttribute('width', '0.8');
+          chairBackrest.setAttribute('height', '0.4');
+          chairBackrest.setAttribute('depth', '0.05');
+          chairBackrest.setAttribute('color', '#333');  // Dark gray backrest
+          scene.appendChild(chairBackrest);
+        }
+
+        // Function to create multiple rows
+        function createRows(scene) {
+          const rows = 8; // Number of rows
+          const columns = 6; // Number of columns
+          const startX = -10; // Starting x position
+          const startZ = -2; // Starting z position
+          const spacing = 3; // Space between desks
+
+          for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < columns; j++) {
+              const x = startX + j * spacing;
+              const z = startZ - i * spacing;
+              createRow(x, z, scene);
+            }
+          }
+        }
+        
+        // Create the desks and chairs in the scene
+        document.addEventListener('DOMContentLoaded', function () {
+          const scene = document.querySelector('a-scene');
+          createRows(scene);
+        });
+      </script>
+    </a-scene>
+  </body>
+</html>
