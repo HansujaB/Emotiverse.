@@ -61,5 +61,5 @@ if (duration === '') {
   errorMessage.textContent = '';
   alert('Login successful!');
   // Redirect to dashboard or next page
-  window.location.href = 'vr.html';
+  window.location.href = 'https://hansujab.github.io/Emotiverse./vr.html';
 });
