@@ -61,5 +61,5 @@ if (duration === '') {
   errorMessage.textContent = '';
   alert('Login successful!');
   // Redirect to dashboard or next page
-  // window.location.href = 'dashboard.html';
+  // window.location.href = 'vr.html';
 });
